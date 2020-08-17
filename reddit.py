@@ -1,25 +1,7 @@
-#Reddit Video Viewer
+# Reddit Video Viewer
 
 import requests, json, os
-'''
-url = input("Enter the multi url: ")
-sort = input("What sort method do you want to use? Enter 1 for hot, 2 for new, 3 for rising, 4 for top, and 5 for gilded: ")
 
-if sort == 1:
-    sortMethod = ""
-elif sort == 2:
-    sortMethod = "new"
-elif sort == 3:
-    sortMethod = "rising"
-elif sort == 4:
-    sortMethod = "top"
-else:
-    sortMethod = "gilded"
-'''
-'''if url.endswith('/'):
-    url = url
-else:
-    url = url + ".json?sort=top&t=month"'''
 url = "https://reddit.com/r/videos+gifs/top.json?sort=top&t=month&limit=100"
 data = requests.get(url, headers = {'User-agent': 'Reddit Viewer  Thing'}).json()
 file = open('list.m3u', 'w')
