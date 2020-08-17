@@ -3,7 +3,7 @@
 import requests, json, os
 
 url = "https://reddit.com/r/videos+gifs/top.json?sort=top&t=month&limit=100"
-data = requests.get(url, headers = {'User-agent': 'Reddit Viewer  Thing'}).json()
+data = requests.get(url, headers = {'User-agent': 'Reddit Viewer'}).json()
 file = open('list.m3u', 'w')
 file.write('#EXTM3U\n')
 pageLength = len(data['data']['children'])
