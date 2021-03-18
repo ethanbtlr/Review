@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 import requests, json, os
 from bs4 import BeautifulSoup
 import youtube_dl
+
 data = requests.get(url, headers = {'User-agent': 'Reddit Viewer'}).json()
 file = open('list.m3u', 'w')
 file.write('#EXTM3U\n')
